@@ -2,7 +2,6 @@
   font-family: 'Helvetica', 'Arial', sans-serif;
   display: grid;
   grid-template-columns: auto auto auto auto;
-  grid-gap: 1px;
   background-color: #000;
   width: 350px;
   padding: 20px;
@@ -10,16 +9,20 @@
   justify-content: center;
 
   &__output {
-    margin-top: 50px;
-    background-color: #000;
+    word-break: break-all;
+    margin: 50px 0 20px;
     color: white;
     grid-column: 1 / 5;
     text-align: right;
-    padding: 10px 20px;
+    padding: 0 20px;
     font-size: 60px;
+
+    &.small {
+      font-size: 30px;
+    }
   }
 
-  &__button {
+  > div {
     border-radius: 100%;
     display: flex;
     font-size: 30px;
@@ -38,12 +41,14 @@
     &.orange {
       background: #f2a33c;
       &:hover {
-        background: orange;
+        transition: 0.3s;
+        background: #a36a00;
       }
     }
 
     &:hover {
-      background: #7c7a6b;
+      transition: 0.3s;
+      background: #4e4e4e;
     }
   }
 }
