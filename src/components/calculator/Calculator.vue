@@ -34,6 +34,7 @@
 
   /* Computed */
   // inferred type: ComputedRef<number>
+  // the value will be displayed in the output screen
   const screenValue = computed(() => {
     if (result.value == '') return 0;
     else return result.value;
@@ -45,11 +46,13 @@
       clear();
     } else if (e == '=') {
       result.value = eval(result.value);
+      // if clicked button is not '=' or C, concat the buttons clicked in the result const
     } else {
       result.value = result.value + e;
     }
   };
 
+  // clear function
   const clear = () => {
     result.value = '';
   };
